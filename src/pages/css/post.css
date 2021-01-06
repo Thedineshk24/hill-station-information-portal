@@ -1,0 +1,9 @@
+.postCard {
+    width: 270px;
+    margin-bottom: 40px;
+}
+
+.postCard__Image{
+    height: 140px;
+    width: 250px;
+}

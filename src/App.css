@@ -1,0 +1,130 @@
+*{
+  margin: 0px;
+  /* padding: 0px; */
+}
+body{
+  
+}
+/* Header */
+#header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FCA311;
+  color : #fff;
+}
+img {
+  width: 100px;
+}
+.buttonn{
+  display: flex;
+  /* flex-direction: row; */
+  margin-left: auto;
+  justify-content: space-around;
+}
+
+
+/* small device header */
+@media (max-width: 767.98px){
+  #header{
+    display: flex;
+    align-items: center;
+    background-color: #FCA311;
+    color : #fff;
+    height: 3.5rem;
+  }
+  Navbar{
+    color:#fff;
+  }
+  img {
+    width: 80px;
+  }
+}
+
+
+/* About us */
+#aboutus{
+  height: auto;
+  width: auto;
+  margin-top: 25px;
+}
+
+/* small devices about us */
+@media (max-width: 767.98px) {
+  #aboutus{
+    height: 100%;
+    width: 100%;
+    margin-top: 25px;
+  }
+}
+
+/* ourteam */
+#ourteam{
+  height: auto;
+  width: auto;
+  margin-top: 25px;
+}
+
+/* small devices contactus */
+@media (max-width: 767.98px) {
+  #ourteam{
+    height: 100%;
+    width: 100%;
+    margin-top: 25px;
+  }
+}
+
+
+/* Conactus */
+
+#contact{
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+/* Notfound */
+
+#notfound{
+  height: auto;
+  width: auto;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+/* mini version of not found */
+@media (max-width : 767.98px){
+
+  #notfound{
+    height: 100%;
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    min-height: 100vh;
+    min-width: 100vw;
+  }
+  .not__found__heading{
+    height: auto;
+    align-content: center;
+    width: auto;
+    font-size:22px;
+    margin-bottom: 15px;
+  }
+}
+
+
+/* Footer */
+.footer{
+  margin-top: auto;
+  height: 80px;
+  background-color: #FCA311;
+}
+
+/* footer small devices */
+@media (max-width: 767.98px){
+  .footer{
+    height:3.5rem;
+  }
+  img{
+    width: 60px;
+  }
+}
