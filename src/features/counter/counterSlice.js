@@ -5,7 +5,6 @@ export const counterSlice = createSlice({
   name:"Post",
   initialState: {
     value: 0,
-    Image : {}
   },
   reducers: {
     increment: state => {
@@ -21,9 +20,6 @@ export const counterSlice = createSlice({
     incrementByAmount: (state, action) => {
       state.value += action.payload;
     },
-  },
-  reducers : {
-    
   },
 });
 

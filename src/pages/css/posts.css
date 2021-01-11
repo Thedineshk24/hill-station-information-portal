@@ -3,6 +3,7 @@
     padding : 40px 20px;
     padding-bottom:0;
     display: flex;
+    margin-top: 10px;
 }
 
 .posts > h2 {

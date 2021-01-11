@@ -40,9 +40,9 @@ const Header = () => {
             <NavItem>
               <NavLink><Link to="/contact" className="text-white">Contact</Link></NavLink>
             </NavItem>
-            <div className="ml-auto buttonn">
-              <NavLink href="/signin"><Button color="info" className="text-white" size="lg" outline type="button"> sign in</Button></NavLink>
-              <NavLink href="/signup"><Button color="info" className="text-white" size="lg" outline type="button"> sing up</Button></NavLink>
+            <div className="ml-auto p-1 buttonn">
+              <NavLink href="/signin"><Button color="secondary" className="text-white" type="button"> sign in</Button></NavLink>
+              <NavLink href="/signup"><Button color="secondary" className="text-white" type="button"> sing up</Button></NavLink>
             </div>
 
 

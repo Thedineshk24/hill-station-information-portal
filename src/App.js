@@ -24,27 +24,72 @@ import Notfound from './pages/Notfound';
 import Searchbar from "./components/Searchbar";
 // post
 import Posts from './pages/Posts';
+// signin
+import SignIn from "./pages/SignIn";
+// signup
+import SignUp from './pages/SignUp';
+// slider
+import Slider from './components/Slider';
+// Admin
+import NavbarAdmin from "./Admin/NavbarAdmin";
+// Add
+import Add from "./Admin/pages/AddData";
+// Update
+import Update from "./Admin/pages/UpdateData";
+import DeleteData from './Admin/pages/DeleteData';
 
 const App = () => {
   return (
     <Router>
       <Header />
-      <Searchbar />
+
       <Switch>
         <Route exact path="/">
-
+          <Searchbar />
+          <Slider />
           <Posts />
-         { /*<Counter /> */}
+          { /*<Counter /> */}
         </Route>
+
         <Route exact path="/about">
           <About />
         </Route>
+
         <Route exact path="/contact">
           <Contact />
         </Route>
 
+        <Route exact path="/signin">
+          <SignIn />
+        </Route>
+
+        <Route exact path="/signup">
+          <SignUp />
+        </Route>
+
+        <Route exact path="/admin">
+          <NavbarAdmin /> 
+          <Add />
+        </Route>
+
+        <Route exact path="/add">
+          <NavbarAdmin /> 
+          <Add />
+        </Route>
+
+        <Route exact path="/edit">
+          <NavbarAdmin />
+          <Update />
+        </Route>
+
+        <Route exact path="/delete">
+          <NavbarAdmin />
+          <DeleteData />
+        </Route>
+
         {/* PAGE NOT FOUND*/}
         <Route path="*" component={Notfound}>
+          <Searchbar />
           <Notfound />
         </Route>
       </Switch>
