@@ -34,7 +34,7 @@ import firebase from "firebase/app";
 const SignUp = () => {
   const dispatch = useDispatch();
   let email = useSelector(selectEmail);
-  let password = useSelector(selectPassword);
+  let password= useSelector(selectPassword);
   console.log("REDUX",email);
   console.log("REDUX",password);
   const [isSignUp,setSignUp] = useState(false);
@@ -70,11 +70,11 @@ const SignUp = () => {
     // console.log(email);
     // console.log(password);
 
-    // setEmail("");
-    // setPassword("");
+    // setInputEmail("");
+    // setInputPassword("");
   }
 
-    console.log(isSignUp);
+    // console.log(isSignUp);
     if(isSignUp){
       return <Redirect to="/" />
     }
