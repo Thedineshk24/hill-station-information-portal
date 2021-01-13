@@ -36,7 +36,15 @@ import NavbarAdmin from "./Admin/NavbarAdmin";
 import Add from "./Admin/pages/AddData";
 // Update
 import Update from "./Admin/pages/UpdateData";
+// Delete
 import DeleteData from './Admin/pages/DeleteData';
+
+// firebase
+import firebaseConfig from "./config/firebase";
+import firebase from "firebase/app";
+import "firebase/auth";
+// init
+firebase.initializeApp(firebaseConfig);
 
 const App = () => {
   return (
