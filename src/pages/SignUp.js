@@ -22,7 +22,10 @@ import {
 import { useSelector, useDispatch } from 'react-redux';
 
 import {
-    email,password
+    setEmail,
+    setPassword,
+    selectEmail,
+    selectPassword
   } from '../features/user/SignupSlice';
 
   // firebase
@@ -30,18 +33,32 @@ import firebase from "firebase/app";
 
 const SignUp = () => {
   const dispatch = useDispatch();
-  // const [email,setEmail] = useState("");
-  // const [password,setPassword] = useState("");
+  let email = useSelector(selectEmail);
+  let password = useSelector(selectPassword);
+  console.log("REDUX",email);
+  console.log("REDUX",password);
   const [isSignUp,setSignUp] = useState(false);
   const [loggedInUser,setLoggedInUser] = useState({});
 
+  const [inputEmail,setInputEmail] = useState("");
+  const [inputPassword,setInputPassword] = useState("");
+
   const handleSubmit = (e) => {
     Registartion();
+    dispatchEmailAndPassword();
     e.preventDefault();
   }
 
+  const dispatchEmailAndPassword = () => {
+        // dispatching payload
+        dispatch(setEmail(inputEmail));
+        dispatch(setPassword(inputPassword));
+  }
+ 
+
+
   const Registartion = () => {
-    firebase.auth().createUserWithEmailAndPassword(email,password)
+    firebase.auth().createUserWithEmailAndPassword(inputEmail,inputPassword)
     .then((user) => {
       setSignUp(true);
       setLoggedInUser(user);
@@ -50,8 +67,8 @@ const SignUp = () => {
       alert(error.message);
     });
 
-    console.log(email);
-    console.log(password);
+    // console.log(email);
+    // console.log(password);
 
     // setEmail("");
     // setPassword("");
@@ -68,14 +85,14 @@ const SignUp = () => {
           
           <FormGroup className="p-3">
             <Label for="email">Email</Label>
-            <Input type="email" name="email" placeholder="yourname@gmail.com" value={email}
-             onChange={(e) => dispatch(email({email:email}))} required />
+            <Input type="email" name="email" placeholder="yourname@gmail.com" value={inputEmail}
+             onChange={(e) => setInputEmail(e.target.value)} required />
           </FormGroup>
 
           <FormGroup className="p-3">
             <Label for="password">password</Label>
-            <Input type="password" name="password" value={password}
-            onChange={(e) => dispatch(password({password:password}))}
+            <Input type="password" name="password" value={inputPassword}
+            onChange={(e) => setInputPassword(e.target.value)}
             placeholder="*************" required />
           </FormGroup>
 
