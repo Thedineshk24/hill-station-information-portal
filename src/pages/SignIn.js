@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import {
     Form,
-    Row,
-    Col,
     Input,
-    InputGroup,
     FormGroup,
     Label,
     Button
@@ -19,10 +16,11 @@ import { Redirect } from 'react-router-dom';
 
 import {
     setEmail,
-    setPassword
+    setPassword,
 } from "../features/user/SignInSlice";
 
 import {useSelector,useDispatch} from "react-redux";
+import {toast} from "react-toastify";
 const SignIn = () => {
     const [inputEmail, setInputEmail] = useState("");
     const [inputPassword, setInputPassword] = useState("");
@@ -50,7 +48,9 @@ const SignIn = () => {
                 setSignIn(true);
             })
             .catch((error) => {
-                alert(error.message);
+                toast(error.message,{
+                    type:"error"
+                })
             })
     }
 

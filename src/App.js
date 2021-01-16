@@ -38,6 +38,12 @@ import Add from "./Admin/pages/AddData";
 import Update from "./Admin/pages/UpdateData";
 // Delete
 import DeleteData from './Admin/pages/DeleteData';
+// react toastify
+import 'react-toastify/dist/ReactToastify.css';
+import {
+  ToastContainer,
+  toast
+} from "react-toastify";
 
 // firebase
 import firebaseConfig from "./config/firebase";
@@ -68,10 +74,12 @@ const App = () => {
         </Route>
 
         <Route exact path="/signin">
+          <ToastContainer />
           <SignIn />
         </Route>
 
         <Route exact path="/signup">
+          <ToastContainer />
           <SignUp />
         </Route>
 

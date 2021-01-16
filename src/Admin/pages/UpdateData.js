@@ -11,13 +11,13 @@ const UpdateData = () => {
     return (
         <Form style={{marginTop:40}}>
             <FormGroup>
-                <Label for="hillstation">hillstation</Label>
+                <Label for="hillstation">Hillstation</Label>
                 <Input type="text" value="" />
             </FormGroup>
 
             <FormGroup>
                 <Label for="description">Information</Label>
-                <Input type="textarea" value="" />
+                <Input type="textarea" rows="15" value="" />
             </FormGroup>
 
             <FormGroup className="text-center">

@@ -31,6 +31,9 @@ import {
   // firebase
 import firebase from "firebase/app";
 
+// toastify
+import {toast} from "react-toastify";
+
 const SignUp = () => {
   const dispatch = useDispatch();
   let email = useSelector(selectEmail);
@@ -64,7 +67,9 @@ const SignUp = () => {
       setLoggedInUser(user);
     })
     .catch((error) => {
-      alert(error.message);
+      toast(error.message,{
+        type:"error"
+      })
     });
 
     // console.log(email);

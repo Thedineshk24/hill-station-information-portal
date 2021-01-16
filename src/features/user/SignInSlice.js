@@ -5,7 +5,7 @@ export const userSignInSlice = createSlice({
 
   initialState: {
     email : "",
-    password : ""
+    password : "",
   },
   reducers: {
     setEmail: (state,action )=> {
@@ -18,10 +18,13 @@ export const userSignInSlice = createSlice({
     setPassword: (state,action )=> {
       state.password = action.payload;
     },
+    logoutUser : (state,action) => {
+      state.logout = action.payload
+    },
   },
 });
 
-export const { setEmail,setPassword } = userSignInSlice.actions;
+export const { setEmail,setPassword,logoutUser } = userSignInSlice.actions;
 
 // console.log(email,password);
 
